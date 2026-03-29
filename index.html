@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Me Elton DoRego — Notaire | Sainte-Anne-des-Plaines</title>
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%230f1e2e'/%3E%3Ctext x='14' y='65' font-family='Georgia,serif' font-size='42' font-weight='400' fill='%23b89a5a'%3EE%3C/text%3E%3Crect x='50' y='15' width='2' height='70' fill='%23b89a5a'/%3E%3Ctext x='57' y='65' font-family='Georgia,serif' font-size='42' font-weight='400' fill='%23b89a5a'%3ED%3C/text%3E%3C/svg%3E">
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500&family=Pinyon+Script&display=swap" rel="stylesheet">
 <style>
   :root {
     --navy: #0f1e2e;
@@ -411,32 +411,33 @@
 
   /* ── QUOTE CAROUSEL ── */
   .hero-quote-carousel {
-    position: absolute; right: 5%; top: 50%; transform: translateY(-50%);
-    width: 320px;
+    position: absolute; right: 3%; top: 50%; transform: translateY(-50%);
+    width: 380px;
     display: none;
+    text-align: center;
   }
   @media(min-width:900px){ .hero-quote-carousel { display: block; } }
   .quote-slide {
     position: absolute; top: 0; left: 0; right: 0;
-    opacity: 0; transition: opacity 1.2s ease;
+    opacity: 0; transition: opacity 1.5s ease;
     text-align: center;
-    padding: 2rem;
+    padding: 2.5rem;
     border: 1px solid rgba(184,154,90,.2);
     border-radius: 4px;
   }
   .quote-slide.active { opacity: 1; position: relative; }
-  .quote-track { position: relative; min-height: 180px; display: flex; align-items: center; justify-content: center; }
+  .quote-track { position: relative; min-height: 200px; display: flex; align-items: center; justify-content: center; }
   .quote-mark {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 5rem; line-height: .6;
-    color: var(--gold); opacity: .4;
-    display: block; margin-bottom: .5rem;
+    font-family: 'Pinyon Script', cursive;
+    font-size: 7rem; line-height: .5;
+    color: var(--gold); opacity: .5;
+    display: block; margin-bottom: .8rem;
   }
   .quote-slide p {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 1.15rem; font-style: italic;
-    color: rgba(255,255,255,.85);
-    line-height: 1.7;
+    font-family: 'Pinyon Script', cursive;
+    font-size: 1.65rem;
+    color: rgba(255,255,255,.9);
+    line-height: 1.8;
     margin: 0;
   }
   .quote-dots {
@@ -655,13 +656,13 @@
           <div class="contact-icon">
             <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
           </div>
-          <span>Sainte-Anne-des-Plaines, Québec</span>
+          <span>457 Boulevard Sainte-Anne, Sainte-Anne-des-Plaines, Québec J5N 3M2</span>
         </div>
         <div class="contact-item">
           <div class="contact-icon">
             <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
           </div>
-          <span>Lundi – Vendredi : 9h00 – 12h00 &amp; 13h30 – 17h00 | Samedi : Fermé</span>
+          <span>Lundi – Vendredi : 9h00 – 12h00 &amp; 13h30 – 17h00<br>Samedi – Dimanche : Fermé</span>
         </div>
       </div>
       <div class="reveal">
@@ -876,7 +877,7 @@
     dotsContainer.children[current].classList.add('active');
   }
 
-  setInterval(() => goTo((current + 1) % slides.length), 5000);
+  setInterval(() => goTo((current + 1) % slides.length), 8000);
 </script>
 </body>
 </html>
