@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Me Elton DoRego — Notaire | Sainte-Anne-des-Plaines</title>
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%230f1e2e'/%3E%3Ctext x='24' y='65' font-family='Georgia,serif' font-size='46' font-weight='400' fill='%23b89a5a'%3EE%3C/text%3E%3Crect x='50' y='15' width='2' height='70' fill='%23b89a5a'/%3E%3Ctext x='54' y='65' font-family='Georgia,serif' font-size='46' font-weight='400' fill='%23b89a5a'%3ED%3C/text%3E%3C/svg%3E">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%230f1e2e'/%3E%3Ctext x='18' y='65' font-family='Georgia,serif' font-size='44' font-weight='400' fill='%23b89a5a'%3EE%3C/text%3E%3Crect x='49' y='15' width='2' height='70' fill='%23b89a5a'/%3E%3Ctext x='56' y='65' font-family='Georgia,serif' font-size='44' font-weight='400' fill='%23b89a5a'%3ED%3C/text%3E%3C/svg%3E">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
   :root {
@@ -261,8 +261,10 @@
   .service-card:hover .service-num,
   .service-card:hover h3,
   .service-card:hover p { color: var(--white); }
-  .service-num {
-    font-family: 'Cormorant Garamond', serif;
+  .service-icon { margin-bottom: 1.2rem; }
+  .service-icon svg { display: block; transition: stroke .3s; }
+  .service-card:hover .service-icon svg { stroke: var(--gold-light); }
+  .service-num {    font-family: 'Cormorant Garamond', serif;
     font-size: 2.5rem; font-weight: 300;
     color: rgba(184,154,90,.3);
     line-height: 1; margin-bottom: 1.2rem;
@@ -456,19 +458,10 @@
       <p class="section-label">À propos</p>
       <h2>Un notaire à votre service à Sainte-Anne-des-Plaines</h2>
       <div class="rule"></div>
-      <p>Me Elton DoRego est notaire pratiquant à Sainte-Anne-des-Plaines, au cœur des Laurentides. Membre en règle de la Chambre des notaires du Québec, il met son expertise au service des particuliers, des familles et des entrepreneurs de la région.</p>
-      <p>Son approche repose sur l'écoute, la rigueur et la transparence. Chaque dossier bénéficie d'une attention personnalisée, afin que chaque client comprenne pleinement les implications juridiques de ses décisions.</p>
-      <p>Qu'il s'agisse d'une transaction immobilière, de la rédaction d'un testament ou de la planification successorale, Me DoRego vous accompagne avec professionnalisme et discrétion.</p>
-      <div class="stats-row">
-        <div class="stat">
-          <div class="stat-num">5</div>
-          <div class="stat-label">Domaines de pratique</div>
-        </div>
-        <div class="stat">
-          <div class="stat-num">450</div>
-          <div class="stat-label">478-0360</div>
-        </div>
-      </div>
+      <p>Me Elton DoRego est notaire à Sainte-Anne-des-Plaines. Membre de la Chambre des notaires du Québec, il accompagne une clientèle composée de particuliers, de familles et d'entrepreneurs dans la réalisation de leurs projets et la protection de leurs intérêts.</p>
+      <p>Reconnu pour son approche à la fois rigoureuse et accessible, il accorde une importance particulière à la compréhension réelle des enjeux par ses clients. Au-delà de la rédaction d'actes, il propose des solutions juridiques claires, réfléchies et adaptées à chaque situation.</p>
+      <p>Qu'il s'agisse d'une transaction immobilière, d'un testament, d'une planification successorale, d'un contrat de mariage ou de l'incorporation d'une entreprise, Me DoRego adopte une approche proactive — prévenir les risques, sécuriser les opérations et assurer la pérennité de chaque décision.</p>
+
     </div>
   </div>
 </section>
@@ -482,29 +475,73 @@
   </div>
   <div class="services-grid reveal">
     <div class="service-card">
-      <div class="service-num">01</div>
+      <div class="service-icon">
+        <svg width="48" height="48" viewBox="0 0 68 68" fill="none" stroke="#b89a5a" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="34,30 34,4 0,30"/>
+          <polyline points="-4,30 34,4 72,30"/>
+          <rect x="10" y="30" width="48" height="34" rx="2"/>
+          <rect x="27" y="42" width="14" height="22" rx="1"/>
+        </svg>
+      </div>
       <h3>Droit immobilier</h3>
-      <p>Actes de vente, hypothèques, promesses d'achat, partage de copropriété. Me DoRego sécurise chaque étape de vos transactions immobilières.</p>
+      <p>Vente, hypothèque, donation, quittance, promesse d'achat et servitude. Me DoRego sécurise chaque étape de vos transactions immobilières.</p>
     </div>
     <div class="service-card">
-      <div class="service-num">02</div>
+      <div class="service-icon">
+        <svg width="48" height="48" viewBox="0 0 68 68" fill="none" stroke="#b89a5a" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="34" cy="14" r="12"/>
+          <path d="M8,56 Q8,36 34,36 Q60,36 60,56"/>
+          <path d="M34,42 L46,47 L46,58 Q46,66 34,70 Q22,66 22,58 L22,47 Z"/>
+        </svg>
+      </div>
       <h3>Droit de la personne</h3>
-      <p>Mandats de protection, tutelles, curatelles — protection juridique pour les personnes vulnérables et leurs proches.</p>
+      <p>Testament, mandat de protection et procuration générale. Anticipez l'avenir et assurez une protection juridique solide pour vous et vos proches.</p>
     </div>
     <div class="service-card">
-      <div class="service-num">03</div>
+      <div class="service-icon">
+        <svg width="48" height="48" viewBox="0 0 68 68" fill="none" stroke="#b89a5a" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="8" y="4" width="52" height="60" rx="4"/>
+          <path d="M8,16 Q34,22 60,16"/>
+          <line x1="18" y1="30" x2="50" y2="30"/>
+          <line x1="18" y1="40" x2="50" y2="40"/>
+          <line x1="18" y1="50" x2="42" y2="50"/>
+          <path d="M26,58 Q34,54 42,58"/>
+        </svg>
+      </div>
       <h3>Droit des successions</h3>
-      <p>Testaments, liquidation de succession, planification successorale. Anticipez sereinement la transmission de votre patrimoine.</p>
+      <p>Règlement de succession, recherche testamentaire, déclaration de transmission, déclaration d'hérédité, inventaire successoral et reddition de compte. Un accompagnement rigoureux à chaque étape.</p>
     </div>
     <div class="service-card">
-      <div class="service-num">04</div>
+      <div class="service-icon">
+        <svg width="48" height="48" viewBox="0 0 68 68" fill="none" stroke="#b89a5a" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="10" y="8" width="48" height="56" rx="2"/>
+          <line x1="10" y1="24" x2="58" y2="24"/>
+          <rect x="17" y="13" width="8" height="8" rx="1"/>
+          <rect x="30" y="13" width="8" height="8" rx="1"/>
+          <rect x="43" y="13" width="8" height="8" rx="1"/>
+          <rect x="17" y="30" width="8" height="8" rx="1"/>
+          <rect x="30" y="30" width="8" height="8" rx="1"/>
+          <rect x="43" y="30" width="8" height="8" rx="1"/>
+          <rect x="17" y="44" width="8" height="8" rx="1"/>
+          <rect x="43" y="44" width="8" height="8" rx="1"/>
+          <rect x="28" y="46" width="12" height="18" rx="1"/>
+        </svg>
+      </div>
       <h3>Droit corporatif</h3>
-      <p>Incorporations, conventions entre actionnaires, transferts d'entreprise. Un appui juridique solide pour les entrepreneurs.</p>
+      <p>Incorporation, convention entre actionnaires, résolutions et transfert d'entreprise. Un appui juridique solide pour les entrepreneurs et les dirigeants.</p>
     </div>
     <div class="service-card">
-      <div class="service-num">05</div>
+      <div class="service-icon">
+        <svg width="48" height="48" viewBox="0 0 68 68" fill="none" stroke="#b89a5a" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="22" cy="14" r="10"/>
+          <path d="M2,48 Q2,32 22,32 Q42,32 42,48"/>
+          <circle cx="50" cy="16" r="8"/>
+          <path d="M36,50 Q36,36 50,36 Q64,36 64,50"/>
+          <path d="M28,56 Q28,50 32,50 Q36,46 40,50 Q44,46 48,50 Q52,50 52,56 Q40,64 28,56Z"/>
+        </svg>
+      </div>
       <h3>Droit de la famille</h3>
-      <p>Contrats de mariage, union civile, cohabitation, séparation de biens — des actes rédigés avec rigueur pour protéger votre famille.</p>
+      <p>Célébration de mariage, contrat de mariage, union parentale et convention de vie commune. Des actes rédigés avec rigueur pour protéger votre famille.</p>
     </div>
     <div class="service-card" style="background: var(--navy); cursor:pointer;" onclick="document.getElementById('rendezvous').scrollIntoView({behavior:'smooth'})">
       <div class="service-num" style="color: rgba(184,154,90,.5);">→</div>
@@ -544,30 +581,32 @@
         </div>
       </div>
       <div class="reveal">
-        <form class="rdv-form" onsubmit="handleSubmit(event)">
+        <form class="rdv-form" action="https://formspree.io/f/xqegpoqn" method="POST">
+          <input type="hidden" name="_replyto" value="edorego@notarius.net">
+          <input type="hidden" name="_subject" value="Nouvelle demande de rendez-vous — doregonotaire.ca">
           <div class="form-row">
             <div class="field">
               <label for="prenom">Prénom</label>
-              <input type="text" id="prenom" placeholder="Marie" required>
+              <input type="text" id="prenom" name="prenom" placeholder="Marie" required>
             </div>
             <div class="field">
               <label for="nom">Nom</label>
-              <input type="text" id="nom" placeholder="Tremblay" required>
+              <input type="text" id="nom" name="nom" placeholder="Tremblay" required>
             </div>
           </div>
           <div class="form-row">
             <div class="field">
               <label for="tel">Téléphone</label>
-              <input type="tel" id="tel" placeholder="514-000-0000">
+              <input type="tel" id="tel" name="telephone" placeholder="514-000-0000">
             </div>
             <div class="field">
               <label for="courriel">Courriel</label>
-              <input type="email" id="courriel" placeholder="marie@courriel.com" required>
+              <input type="email" id="courriel" name="email" placeholder="marie@courriel.com" required>
             </div>
           </div>
           <div class="field">
             <label for="service">Service requis</label>
-            <select id="service">
+            <select id="service" name="service">
               <option value="">Sélectionner un service…</option>
               <option>Droit immobilier</option>
               <option>Droit de la personne</option>
@@ -579,10 +618,10 @@
           </div>
           <div class="field">
             <label for="message">Message (facultatif)</label>
-            <textarea id="message" placeholder="Décrivez brièvement votre situation…"></textarea>
+            <textarea id="message" name="message" placeholder="Décrivez brièvement votre situation…"></textarea>
           </div>
+          <p style="font-size:.78rem;color:rgba(255,255,255,.4);line-height:1.6;border-left:2px solid rgba(184,154,90,.3);padding-left:.8rem;">⚠ Les informations transmises via ce formulaire sont utilisées uniquement pour vous contacter. Ne transmettez aucune information sensible ou confidentielle.</p>
           <button type="submit" class="btn-submit">Envoyer la demande</button>
-          <p id="form-msg" style="font-size:.85rem;color:var(--gold-light);display:none;margin-top:.5rem;">✓ Votre message a été envoyé. Nous vous contacterons sous peu.</p>
         </form>
       </div>
     </div>
