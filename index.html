@@ -4,6 +4,64 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Me Elton DoRego — Notaire | Sainte-Anne-des-Plaines</title>
+
+<!-- SEO de base -->
+<meta name="description" content="Me Elton DoRego, notaire à Sainte-Anne-des-Plaines. Services en droit immobilier, successions, droit de la personne, droit corporatif et droit de la famille. Anciennement Gagnon et Dugas, notaires, établi depuis 1976.">
+<meta name="keywords" content="notaire, Sainte-Anne-des-Plaines, notaire Laurentides, notaire Lanaudière, droit immobilier, testament, succession, mandat de protection, contrat de mariage, incorporation, DoRego, Gagnon Dugas">
+<meta name="author" content="Me Elton DoRego, notaire">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://doregonotaire.ca/">
+
+<!-- Open Graph (Facebook, LinkedIn) -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://doregonotaire.ca/">
+<meta property="og:title" content="Me Elton DoRego — Notaire | Sainte-Anne-des-Plaines">
+<meta property="og:description" content="Notaire à Sainte-Anne-des-Plaines. Droit immobilier, successions, droit de la personne, corporatif et famille. Anciennement Gagnon et Dugas, notaires.">
+<meta property="og:locale" content="fr_CA">
+<meta property="og:site_name" content="DoRego Notaire">
+
+<!-- Données structurées (Google) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LegalService",
+  "name": "Me Elton DoRego, notaire",
+  "description": "Notaire à Sainte-Anne-des-Plaines offrant des services en droit immobilier, successions, droit de la personne, droit corporatif et droit de la famille.",
+  "url": "https://doregonotaire.ca",
+  "telephone": "+14504780360",
+  "email": "edorego@notarius.net",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "457, boulevard Sainte-Anne",
+    "addressLocality": "Sainte-Anne-des-Plaines",
+    "addressRegion": "QC",
+    "postalCode": "J5N 3M2",
+    "addressCountry": "CA"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 45.7661,
+    "longitude": -73.8170
+  },
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+      "opens": "09:00",
+      "closes": "12:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+      "opens": "13:30",
+      "closes": "17:00"
+    }
+  ],
+  "areaServed": ["Sainte-Anne-des-Plaines","Mirabel","Blainville","Saint-Jérôme","Laurentides","Lanaudière"],
+  "priceRange": "$$",
+  "hasMap": "https://maps.google.com/?q=457+Boulevard+Sainte-Anne,+Sainte-Anne-des-Plaines,+QC+J5N+3M2"
+}
+</script>
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%230f1e2e'/%3E%3Ctext x='14' y='65' font-family='Georgia,serif' font-size='42' font-weight='400' fill='%23b89a5a'%3EE%3C/text%3E%3Crect x='50' y='15' width='2' height='70' fill='%23b89a5a'/%3E%3Ctext x='57' y='65' font-family='Georgia,serif' font-size='42' font-weight='400' fill='%23b89a5a'%3ED%3C/text%3E%3C/svg%3E">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500&family=Pinyon+Script&display=swap" rel="stylesheet">
 <style>
@@ -401,8 +459,13 @@
   .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; background: none; border: none; }
   .hamburger span { display: block; width: 24px; height: 1px; background: var(--white); transition: all .3s; }
   @media(max-width:750px){
-    .nav-links { display: none; }
-    .hamburger { display: flex; }
+    .nav-links { display: none; flex-direction: column; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(15,30,46,.98); align-items: center; justify-content: center; gap: 2.5rem; z-index: 99; }
+    .nav-links.open { display: flex; }
+    .nav-links a { font-size: 1.1rem; letter-spacing: .2em; }
+    .hamburger { display: flex; z-index: 101; position: relative; }
+    .hamburger.open span:nth-child(1) { transform: rotate(45deg) translate(4px, 4px); }
+    .hamburger.open span:nth-child(2) { opacity: 0; }
+    .hamburger.open span:nth-child(3) { transform: rotate(-45deg) translate(4px, -4px); }
   }
 
   /* Scroll reveal utility */
@@ -613,11 +676,6 @@
       <h3>Droit de la famille</h3>
       <p>Célébration de mariage, contrat de mariage, union parentale et convention de vie commune. Des actes rédigés avec rigueur pour protéger votre famille.</p>
     </div>
-    <div class="service-card" style="background: var(--navy); cursor:pointer;" onclick="document.getElementById('rendezvous').scrollIntoView({behavior:'smooth'})">
-      <div class="service-num" style="color: rgba(184,154,90,.5);">→</div>
-      <h3 style="color: var(--white);">Nous contacter</h3>
-      <p style="color: rgba(255,255,255,.55);">Écrivez-nous pour toute question sur nos services, nos tarifs ou pour prendre rendez-vous.</p>
-    </div>
   </div>
 </section>
 
@@ -714,7 +772,7 @@
     <article class="article-card reveal">
       <div class="article-tag-bar"><span class="article-tag">Droit immobilier</span></div>
       <div class="article-body">
-        <p class="article-date">15 mars 2025</p>
+        
         <h3>Acheter une propriété au Québec : le rôle essentiel du notaire</h3>
         <p>L'acquisition d'une propriété représente souvent la décision financière la plus importante d'une vie. Le notaire joue un rôle central et obligatoire dans toute transaction immobilière : vérification des titres, rédaction de l'acte authentique, et publication au Registre foncier. Une protection juridique complète, de la promesse d'achat jusqu'à la remise des clés.</p>
         <a href="article-immobilier.html" class="article-read">Lire l'article</a>
@@ -723,7 +781,7 @@
     <article class="article-card reveal">
       <div class="article-tag-bar"><span class="article-tag">Droit des successions</span></div>
       <div class="article-body">
-        <p class="article-date">28 janvier 2025</p>
+        
         <h3>Pourquoi rédiger un testament chez le notaire ?</h3>
         <p>Tous les testaments ne se valent pas. Contrairement au testament olographe, le testament notarié est un acte authentique inscrit au Registre des dispositions testamentaires — aucune vérification judiciaire n'est requise après le décès. Un gage de sécurité inestimable pour vos héritiers.</p>
         <a href="article-testament.html" class="article-read">Lire l'article</a>
@@ -732,7 +790,7 @@
     <article class="article-card reveal">
       <div class="article-tag-bar"><span class="article-tag">Droit de la famille</span></div>
       <div class="article-body">
-        <p class="article-date">10 novembre 2024</p>
+        
         <h3>Conjoints de fait ou mariés : des droits très différents que vous devez connaître</h3>
         <p>Au Québec, les conjoints de fait ne bénéficient d'aucune des protections automatiques accordées aux couples mariés. Depuis le 30 juin 2025, un nouveau régime d'union parentale accorde toutefois certains droits aux conjoints ayant un enfant commun. Ce que vous devez savoir pour protéger votre famille.</p>
         <a href="article-famille.html" class="article-read">Lire l'article</a>
@@ -826,6 +884,20 @@
 </div>
 
 <script>
+  // Mobile menu
+  const hamburger = document.querySelector('.hamburger');
+  const navLinks = document.querySelector('.nav-links');
+  hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('open');
+    navLinks.classList.toggle('open');
+  });
+  navLinks.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      hamburger.classList.remove('open');
+      navLinks.classList.remove('open');
+    });
+  });
+
   // Scroll reveal
   const reveals = document.querySelectorAll('.reveal');
   if ('IntersectionObserver' in window) {
