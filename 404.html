@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Page introuvable — Me Elton DoRego, notaire</title>
+<meta name="robots" content="noindex, nofollow">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #0f1e2e;
+    --gold: #b89a5a;
+    --gold-light: #d4b87a;
+    --cream: #f5f0e8;
+    --white: #ffffff;
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { height: 100%; }
+  body {
+    font-family: 'Jost', sans-serif;
+    background: var(--navy);
+    color: var(--white);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 2rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  /* Grille de fond subtile */
+  body::before {
+    content: '';
+    position: absolute; inset: 0;
+    background:
+      repeating-linear-gradient(0deg, transparent, transparent 80px, rgba(184,154,90,.03) 80px, rgba(184,154,90,.03) 81px),
+      repeating-linear-gradient(90deg, transparent, transparent 80px, rgba(184,154,90,.03) 80px, rgba(184,154,90,.03) 81px);
+    pointer-events: none;
+  }
+
+  .inner { position: relative; max-width: 560px; }
+
+  /* Grand 404 décoratif */
+  .big-number {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(7rem, 20vw, 14rem);
+    font-weight: 300;
+    line-height: 1;
+    color: rgba(184,154,90,.15);
+    letter-spacing: -.02em;
+    margin-bottom: -1.5rem;
+    position: relative;
+  }
+
+  /* Séparateur or */
+  .rule {
+    width: 50px; height: 1.5px;
+    background: var(--gold);
+    margin: 1.8rem auto;
+  }
+
+  /* Badge */
+  .badge {
+    display: inline-block;
+    font-size: .7rem;
+    letter-spacing: .25em;
+    text-transform: uppercase;
+    color: var(--gold);
+    border: 1px solid rgba(184,154,90,.35);
+    padding: .35rem 1rem;
+    border-radius: 2px;
+    margin-bottom: 1.5rem;
+  }
+
+  h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(1.6rem, 4vw, 2.4rem);
+    font-weight: 300;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+    color: var(--white);
+  }
+
+  p {
+    font-size: .95rem;
+    color: rgba(255,255,255,.55);
+    line-height: 1.8;
+    margin-bottom: 2.5rem;
+  }
+
+  .actions {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .btn-primary {
+    display: inline-block;
+    font-size: .75rem;
+    letter-spacing: .15em;
+    text-transform: uppercase;
+    color: var(--navy);
+    background: var(--gold);
+    padding: .9rem 2rem;
+    border-radius: 2px;
+    text-decoration: none;
+    transition: background .25s, transform .2s;
+  }
+  .btn-primary:hover { background: var(--gold-light); transform: translateY(-2px); }
+
+  .btn-secondary {
+    display: inline-block;
+    font-size: .75rem;
+    letter-spacing: .15em;
+    text-transform: uppercase;
+    color: var(--gold-light);
+    border: 1px solid rgba(184,154,90,.4);
+    padding: .9rem 2rem;
+    border-radius: 2px;
+    text-decoration: none;
+    transition: border-color .25s, color .25s, transform .2s;
+  }
+  .btn-secondary:hover { border-color: var(--gold-light); color: var(--white); transform: translateY(-2px); }
+
+  /* Pied de page discret */
+  .footer-note {
+    position: absolute;
+    bottom: 2rem;
+    left: 0; right: 0;
+    font-size: .75rem;
+    color: rgba(255,255,255,.2);
+    letter-spacing: .1em;
+  }
+</style>
+</head>
+<body>
+  <div class="inner">
+    <div class="big-number">404</div>
+    <span class="badge">Page introuvable</span>
+    <div class="rule"></div>
+    <h1>Cette page n'existe pas,<br>mais nous pouvons vous aider.</h1>
+    <p>La page que vous cherchez a peut-être été déplacée ou n'existe plus. Retournez à l'accueil ou contactez-nous directement.</p>
+    <div class="actions">
+      <a href="/" class="btn-primary">Retour à l'accueil</a>
+      <a href="/#rendezvous" class="btn-secondary">Nous contacter</a>
+    </div>
+  </div>
+  <p class="footer-note">Me Elton DoRego, notaire · Sainte-Anne-des-Plaines · 450-478-0360</p>
+</body>
+</html>
