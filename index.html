@@ -57,12 +57,15 @@
       "closes": "17:00"
     }
   ],
-  "areaServed": ["Sainte-Anne-des-Plaines","Mirabel","Blainville","Saint-Jérôme","Laurentides","Lanaudière"],
+  "areaServed": ["Sainte-Anne-des-Plaines","Mirabel","Blainville","Saint-Jérôme","Terrebonne","Sainte-Sophie","Saint-Lin-Laurentides","Saint-Calixte","Bois-des-Filion","Laurentides","Lanaudière"],
   "priceRange": "$$",
   "hasMap": "https://maps.google.com/?q=457+Boulevard+Sainte-Anne,+Sainte-Anne-des-Plaines,+QC+J5N+3M2"
 }
 </script>
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%230f1e2e'/%3E%3Ctext x='14' y='65' font-family='Georgia,serif' font-size='42' font-weight='400' fill='%23b89a5a'%3EE%3C/text%3E%3Crect x='50' y='15' width='2' height='70' fill='%23b89a5a'/%3E%3Ctext x='57' y='65' font-family='Georgia,serif' font-size='42' font-weight='400' fill='%23b89a5a'%3ED%3C/text%3E%3C/svg%3E">
+<link rel="shortcut icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%230f1e2e'/%3E%3Ctext x='14' y='65' font-family='Georgia,serif' font-size='42' font-weight='400' fill='%23b89a5a'%3EE%3C/text%3E%3Crect x='50' y='15' width='2' height='70' fill='%23b89a5a'/%3E%3Ctext x='57' y='65' font-family='Georgia,serif' font-size='42' font-weight='400' fill='%23b89a5a'%3ED%3C/text%3E%3C/svg%3E">
+<link rel="apple-touch-icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%230f1e2e'/%3E%3Ctext x='14' y='65' font-family='Georgia,serif' font-size='42' font-weight='400' fill='%23b89a5a'%3EE%3C/text%3E%3Crect x='50' y='15' width='2' height='70' fill='%23b89a5a'/%3E%3Ctext x='57' y='65' font-family='Georgia,serif' font-size='42' font-weight='400' fill='%23b89a5a'%3ED%3C/text%3E%3C/svg%3E">
+<meta name="theme-color" content="#0f1e2e">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500&family=Pinyon+Script&display=swap" rel="stylesheet">
 <style>
   :root {
@@ -96,8 +99,7 @@
     position: fixed; top: 0; left: 0; right: 0; z-index: 100;
     display: flex; align-items: center; justify-content: space-between;
     padding: 1.4rem 5%;
-    background: rgba(15,30,46,0.97);
-    backdrop-filter: blur(10px);
+    background: #0f1e2e;
     border-bottom: 1px solid rgba(184,154,90,0.2);
     transition: all .3s;
   }
@@ -120,6 +122,28 @@
     transition: color .25s;
   }
   .nav-links a:hover { color: var(--gold-light); }
+  .nav-links a.active { color: rgba(255,255,255,.7); }
+
+  /* Citations mobile */
+  .mobile-quotes {
+    display: none;
+    background: var(--navy);
+    padding: 2.5rem 5% 3rem;
+    text-align: center;
+    border-top: 1px solid rgba(184,154,90,.15);
+  }
+  @media(max-width:899px){ .mobile-quotes { display: block; } }
+  .mobile-quote-text {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.35rem;
+    font-weight: 300;
+    color: rgba(255,255,255,.9);
+    line-height: 1.75;
+    min-height: 2.5em;
+  }
+  .mobile-quote-mark-open { font-family:'Cormorant Garamond',serif; font-size:3rem; line-height:1; color:rgba(184,154,90,.4); display:inline; vertical-align:top; margin-right:.2rem; }
+  .mobile-quote-mark-close { font-family:'Cormorant Garamond',serif; font-size:3rem; line-height:1; color:rgba(184,154,90,.4); display:inline; vertical-align:bottom; margin-left:.2rem; }
+  .mobile-quote-cursor { display:inline-block; width:2px; height:1em; background:rgba(184,154,90,.7); margin-left:2px; vertical-align:middle; animation:blink .7s step-end infinite; }
   .nav-cta {
     font-size: .75rem;
     letter-spacing: .12em;
@@ -459,13 +483,14 @@
   .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; background: none; border: none; }
   .hamburger span { display: block; width: 24px; height: 1px; background: var(--white); transition: all .3s; }
   @media(max-width:750px){
-    .nav-links { display: none; flex-direction: column; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(15,30,46,.98); align-items: center; justify-content: center; gap: 2.5rem; z-index: 99; }
+    .nav-links { display: none; flex-direction: column; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(15,30,46,.98); align-items: center; justify-content: flex-start; padding-top: 5rem; gap: 2.5rem; z-index: 99; }
     .nav-links.open { display: flex; }
     .nav-links a { font-size: 1.1rem; letter-spacing: .2em; }
     .hamburger { display: flex; z-index: 101; position: relative; }
     .hamburger.open span:nth-child(1) { transform: rotate(45deg) translate(4px, 4px); }
     .hamburger.open span:nth-child(2) { opacity: 0; }
     .hamburger.open span:nth-child(3) { transform: rotate(-45deg) translate(4px, -4px); }
+    footer { padding-bottom: 6rem; }
   }
 
   /* Scroll reveal utility */
@@ -505,7 +530,7 @@
   }
   .quote-text-display {
     font-family: 'Cormorant Garamond', serif;
-    font-size: 1.5rem; font-weight: 300;
+    font-size: 1.85rem; font-weight: 300;
     color: rgba(255,255,255,.92);
     line-height: 1.75;
     min-height: 3em;
@@ -578,6 +603,11 @@
     <div class="quote-dots" id="quoteDots"></div>
   </div>
 </section>
+
+<!-- ── CITATIONS MOBILE ── -->
+<div class="mobile-quotes">
+  <div class="mobile-quote-text" id="mobileQuoteDisplay"><span class="mobile-quote-mark-open">"</span><span class="mobile-quote-cursor"></span></div>
+</div>
 
 <!-- ── À PROPOS ── -->
 <section id="apropos">
@@ -826,8 +856,10 @@
       </div>
     </div>
     <div class="footer-bottom">
-      <p class="footer-copy">© 2026 Me Elton DoRego, Notaire. Tous droits réservés.</p>
-      <a href="#" class="footer-chambre" onclick="document.getElementById('modal-confidentialite').style.display='flex'; return false;" style="cursor:pointer; text-decoration:underline; text-underline-offset:3px;">Politique de confidentialité</a>
+      <p class="footer-copy">© 2026 Me Elton DoRego, notaire. Tous droits réservés.</p>
+      <div style="display:flex; align-items:center; gap:1.5rem; flex-wrap:wrap;">
+        <a href="#" class="footer-chambre" onclick="document.getElementById('modal-confidentialite').style.display='flex'; return false;" style="cursor:pointer; text-decoration:underline; text-underline-offset:3px;">Politique de confidentialité</a>
+      </div>
     </div>
   </div>
 </footer>
@@ -884,6 +916,44 @@
 </div>
 
 <script>
+
+  // Mobile quote typewriter (mirrors desktop)
+  const mobileDisplay = document.getElementById('mobileQuoteDisplay');
+  if (mobileDisplay) {
+    const mQuotes = [
+      "La confiance est le fondement de toute relation durable.",
+      "Mieux vaut prévenir que guérir — dans le droit comme dans la vie.",
+      "Le droit bien compris est le meilleur outil pour bâtir en confiance.",
+      "Un acte bien rédigé aujourd'hui évite bien des litiges demain.",
+      "Derrière chaque signature, il y a une vie que l'on protège.",
+      "Comprendre ses droits, c'est déjà les défendre.",
+      "Ce qui est bien fait une fois n'a pas besoin d'être refait.",
+      "La vraie sérénité commence par des affaires en ordre.",
+      "Chaque dossier est unique, chaque client mérite une attention singulière.",
+      "La précision des mots est la première garantie de vos droits."
+    ];
+    let mCurrent = 0, mTypeTimer = null, mWaitTimer = null;
+    function mTypeQuote(n) {
+      mCurrent = n;
+      mobileDisplay.innerHTML = '<span class="mobile-quote-mark-open">"</span><span class="mobile-quote-cursor"></span>';
+      const text = mQuotes[n];
+      const speed = Math.max(55, 2800 / text.length);
+      let i = 0;
+      function next() {
+        if (i < text.length) {
+          mobileDisplay.querySelector('.mobile-quote-cursor').insertAdjacentText('beforebegin', text[i++]);
+          mTypeTimer = setTimeout(next, speed);
+        } else {
+          mobileDisplay.querySelector('.mobile-quote-cursor').insertAdjacentHTML('afterend', '<span class="mobile-quote-mark-close">"</span>');
+          mobileDisplay.querySelector('.mobile-quote-cursor').style.display = 'none';
+          mWaitTimer = setTimeout(() => mTypeQuote((mCurrent + 1) % mQuotes.length), 6000);
+        }
+      }
+      next();
+    }
+    mTypeQuote(0);
+  }
+
   // Mobile menu
   const hamburger = document.querySelector('.hamburger');
   const navLinks = document.querySelector('.nav-links');
