@@ -105,7 +105,7 @@
   }
   .nav-brand {
     font-family: 'Cormorant Garamond', serif;
-    font-size: 1.2rem;
+    font-size: 1.35rem;
     font-weight: 400;
     color: var(--gold-light);
     letter-spacing: .08em;
@@ -114,10 +114,10 @@
   .nav-brand span { color: var(--white); font-weight: 300; }
   .nav-links { display: flex; gap: 2.5rem; list-style: none; }
   .nav-links a {
-    font-size: .78rem;
+    font-size: .88rem;
     letter-spacing: .15em;
     text-transform: uppercase;
-    color: rgba(255,255,255,.7);
+    color: rgba(255,255,255,.85);
     text-decoration: none;
     transition: color .25s;
   }
@@ -318,11 +318,17 @@
   .services-header { max-width: 1200px; margin: 0 auto 4rem; }
   .services-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    grid-template-columns: repeat(5, 1fr);
     gap: 1.5px;
     max-width: 1200px; margin: 0 auto;
     background: rgba(15,30,46,.1);
     border: 1.5px solid rgba(15,30,46,.1);
+  }
+  @media(max-width: 900px) {
+    .services-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+  @media(max-width: 500px) {
+    .services-grid { grid-template-columns: 1fr; }
   }
   .service-card {
     background: var(--white);
@@ -459,15 +465,15 @@
   .footer-inner { max-width: 1200px; margin: 0 auto; }
   .footer-top { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 4rem; margin-bottom: 3rem; }
   @media(max-width:700px){ .footer-top { grid-template-columns: 1fr; gap: 2rem; } }
-  .footer-brand { font-family: 'Cormorant Garamond', serif; font-size: 1.3rem; font-weight: 400; color: var(--gold-light); margin-bottom: .8rem; }
-  .footer-desc { font-size: .85rem; color: rgba(255,255,255,.4); line-height: 1.7; }
-  .footer-col h4 { font-size: .72rem; letter-spacing: .2em; text-transform: uppercase; color: var(--gold); margin-bottom: 1.2rem; }
+  .footer-brand { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: 400; color: var(--gold-light); margin-bottom: .8rem; }
+  .footer-desc { font-size: .95rem; color: rgba(255,255,255,.6); line-height: 1.7; }
+  .footer-col h4 { font-size: .78rem; letter-spacing: .2em; text-transform: uppercase; color: var(--gold); margin-bottom: 1.2rem; }
   .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: .6rem; }
-  .footer-col a { font-size: .85rem; color: rgba(255,255,255,.45); text-decoration: none; transition: color .25s; }
+  .footer-col a { font-size: .95rem; color: rgba(255,255,255,.65); text-decoration: none; transition: color .25s; }
   .footer-col a:hover { color: var(--gold-light); }
-  .footer-bottom { border-top: 1px solid rgba(255,255,255,.07); padding-top: 2rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; }
-  .footer-copy { font-size: .78rem; color: rgba(255,255,255,.3); }
-  .footer-chambre { font-size: .78rem; color: rgba(255,255,255,.3); }
+  .footer-bottom { border-top: 1px solid rgba(255,255,255,.12); padding-top: 2rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; }
+  .footer-copy { font-size: .88rem; color: rgba(255,255,255,.7); }
+  .footer-chambre { font-size: .88rem; color: rgba(255,255,255,.7); }
 
   /* ── ANIMATIONS ── */
   @keyframes fadeUp {
@@ -727,6 +733,12 @@
         </div>
         <div class="contact-item">
           <div class="contact-icon">
+            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          </div>
+          <span><a id="contact-email-link" href="#">edorego&#64;notarius&#46;net</a></span>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">
             <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
           </div>
           <span><a href="https://maps.google.com/?q=457+Boulevard+Sainte-Anne,+Sainte-Anne-des-Plaines,+QC+J5N+3M2" target="_blank" style="color:inherit; text-decoration:none; transition:color .25s;" onmouseover="this.style.color='#d4b87a'" onmouseout="this.style.color='inherit'">457, boulevard Sainte-Anne, Sainte-Anne-des-Plaines (Québec) J5N 3M2</a></span>
@@ -850,6 +862,7 @@
         <h4>Contact</h4>
         <ul>
           <li><a href="tel:4504780360">450-478-0360</a></li>
+          <li><a id="footer-email-link" href="#">edorego&#64;notarius&#46;net</a></li>
           <li><a href="#rendezvous">Formulaire en ligne</a></li>
           <li><a href="https://maps.google.com/?q=457+Boulevard+Sainte-Anne,+Sainte-Anne-des-Plaines,+QC+J5N+3M2" target="_blank">457, boul. Sainte-Anne, Sainte-Anne-des-Plaines (Québec) J5N 3M2</a></li>
         </ul>
@@ -858,7 +871,7 @@
     <div class="footer-bottom">
       <p class="footer-copy">© 2026 Me Elton DoRego, notaire. Tous droits réservés.</p>
       <div style="display:flex; align-items:center; gap:1.5rem; flex-wrap:wrap;">
-        <a href="#" class="footer-chambre" onclick="document.getElementById('modal-confidentialite').style.display='flex'; return false;" style="cursor:pointer; text-decoration:underline; text-underline-offset:3px;">Politique de confidentialité</a>
+        <a href="politique-confidentialite.html" class="footer-chambre" style="text-decoration:underline; text-underline-offset:3px;">Politique de confidentialité et conditions d'utilisation</a>
       </div>
     </div>
   </div>
@@ -953,6 +966,15 @@
     }
     mTypeQuote(0);
   }
+
+  // Email anti-Cloudflare
+  const emailUser = 'edorego';
+  const emailDomain = 'notarius.net';
+  const emailHref = 'mailto:' + emailUser + '@' + emailDomain;
+  const contactLink = document.getElementById('contact-email-link');
+  const footerLink = document.getElementById('footer-email-link');
+  if (contactLink) { contactLink.href = emailHref; contactLink.textContent = emailUser + '@' + emailDomain; }
+  if (footerLink) { footerLink.href = emailHref; footerLink.textContent = emailUser + '@' + emailDomain; }
 
   // Mobile menu
   const hamburger = document.querySelector('.hamburger');
